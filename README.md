@@ -1,4 +1,4 @@
-# Discord Chaos Bot 🤖🔥
+# Discord Argue Bot 🤖🔥
 
 An interactive Discord entertainment bot built using Python and discord.py.
 
