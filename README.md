@@ -90,20 +90,20 @@ TOKEN=your_discord_bot_token
 
 python bot.py
 
-Discord Setup
+**Discord Setup**
 
-Create an application in the Discord Developer Portal
+1. Create an application in the Discord Developer Portal
 
-Create a bot
+2. Create a bot
 
-Enable Message Content Intent
+3. Enable Message Content Intent
 
-Copy token into .env
+4. Copy token into .env
 
-Invite bot using OAuth2 URL Generator
+5. Invite bot using OAuth2 URL Generator
 
-Discord Developer Portal:
-https://discord.com/developers/applications
+6. Discord Developer Portal:
+   https://discord.com/developers/applications
 
 **Project Structure**
 
@@ -118,10 +118,15 @@ discord-chaos-bot/
 **Future Improvements**:
 
 AI-generated responses
+
 Slash command support
+
 Database integration
+
 Leaderboards
+
 Music playback
+
 Web dashboard
 
 #Developed by Apar Ajit Arya
