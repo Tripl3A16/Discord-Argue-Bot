@@ -130,3 +130,7 @@ Music playback
 Web dashboard
 
 #Developed by Apar Ajit Arya
+
+## Operations documentation
+
+- [Librarian video pipeline runbook](docs/VIDEO_PIPELINE_RUNBOOK.md)
