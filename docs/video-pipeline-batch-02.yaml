@@ -1,0 +1,163 @@
+# Prepared only; this file does not launch a pipeline.
+# Librarian availability checked 2026-07-31T20:50:12Z.
+# Deterministic random seed: 24fba2f2474237627b7f1a408a665dfb9782b7a5e8ffd736448ab23357601f7b
+# Pool: currently available assets with local montage-output.mp4 and output-video.mp4,
+# excluding the 15 assets in the preceding batch.
+ideas:
+- id: asset-244-golden-anchored-video-edit
+  librarian_asset_name: asset-244
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair vertical editing task from its visible intent.
+  source_asset: assets/asset-244/montage-output.mp4
+  golden_solution_asset: assets/asset-244/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 265-293 second vertical edit reflecting the hidden reference's story and pacing.
+  task_requirements: &golden_requirements
+  - Expose only montage-output.mp4 to the solver; keep output-video.mp4 hidden.
+  - Have the builder inspect the hidden golden before authoring fair, source-grounded requirements.
+  - Use only supplied media and write /app/output/final_video.mp4.
+  - Do not reveal the golden's exact cuts, timing, layout, transcript, or judge criteria.
+  verifier_focus: &golden_focus
+  - playable, nonblank, audible output in the requested duration and orientation
+  - source-grounded subject, structure, pacing, typography, and audio treatment
+  - no external or fabricated footage and no exposure of the hidden reference
+- id: asset-248-roblox-sell-lemons-guide
+  librarian_asset_name: asset-248
+  family: video-editing-reference-match
+  idea: Derive a concise gameplay guide from the supplied Roblox montage and hidden golden.
+  source_asset: assets/asset-248/montage-output.mp4
+  golden_solution_asset: assets/asset-248/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a fast 13-20 second landscape guide identifying Sell Lemons and its core gameplay objective.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-176-golden-anchored-video-edit
+  librarian_asset_name: asset-176
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair landscape editing task from its visible intent.
+  source_asset: assets/asset-176/montage-output.mp4
+  golden_solution_asset: assets/asset-176/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 36-45 second landscape edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-239-golden-anchored-video-edit
+  librarian_asset_name: asset-239
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair vertical editing task from its visible intent.
+  source_asset: assets/asset-239/montage-output.mp4
+  golden_solution_asset: assets/asset-239/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 70-85 second vertical edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-205-golden-anchored-video-edit
+  librarian_asset_name: asset-205
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair landscape editing task from its visible intent.
+  source_asset: assets/asset-205/montage-output.mp4
+  golden_solution_asset: assets/asset-205/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 22-28 second landscape edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-25-sheep-inventor-surreal-trailer
+  librarian_asset_name: asset-25
+  family: video-editing-reference-match
+  idea: Build a surreal animated teaser from the supplied montage while keeping the reference hidden.
+  source_asset: assets/asset-25/montage-output.mp4
+  golden_solution_asset: assets/asset-25/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a 48-58 second surreal landscape teaser intercutting a dark sheep and a red-haired human as parallel characters.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-234-golden-anchored-video-edit
+  librarian_asset_name: asset-234
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair short vertical editing task from its visible intent.
+  source_asset: assets/asset-234/montage-output.mp4
+  golden_solution_asset: assets/asset-234/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 8-14 second vertical edit reflecting the hidden reference's subject and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-162-golden-anchored-video-edit
+  librarian_asset_name: asset-162
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair landscape editing task from its visible intent.
+  source_asset: assets/asset-162/montage-output.mp4
+  golden_solution_asset: assets/asset-162/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 27-35 second landscape edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-243-golden-anchored-video-edit
+  librarian_asset_name: asset-243
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair 4:3 editing task from its visible intent.
+  source_asset: assets/asset-243/montage-output.mp4
+  golden_solution_asset: assets/asset-243/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 21-28 second 4:3 edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-57-dropshipping-car-commentary-short
+  librarian_asset_name: asset-57
+  family: video-editing-reference-match
+  idea: Build a vertical business-commentary short from the supplied montage and hidden golden.
+  source_asset: assets/asset-57/montage-output.mp4
+  golden_solution_asset: assets/asset-57/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Produce a 29-36 second vertical commentary short about dropshipping in 2026 using the supplied in-car speaker and business imagery.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-250-golden-anchored-video-edit
+  librarian_asset_name: asset-250
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair landscape editing task from its visible intent.
+  source_asset: assets/asset-250/montage-output.mp4
+  golden_solution_asset: assets/asset-250/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 56-69 second landscape edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-165-golden-anchored-video-edit
+  librarian_asset_name: asset-165
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair landscape editing task from its visible intent.
+  source_asset: assets/asset-165/montage-output.mp4
+  golden_solution_asset: assets/asset-165/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 35-43 second landscape edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-4-motion-graphics-template-showcase
+  librarian_asset_name: asset-4
+  family: video-editing-reference-match
+  idea: Build a polished motion-graphics showcase from the supplied montage and hidden golden.
+  source_asset: assets/asset-4/montage-output.mp4
+  golden_solution_asset: assets/asset-4/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Produce a 27-34 second landscape reel progressing from portrait treatment through city typography and bright geometric abstraction.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-171-golden-anchored-video-edit
+  librarian_asset_name: asset-171
+  family: video-editing-reference-match
+  idea: Inspect the hidden golden and derive a fair widescreen editing task from its visible intent.
+  source_asset: assets/asset-171/montage-output.mp4
+  golden_solution_asset: assets/asset-171/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a source-grounded 28-36 second widescreen edit reflecting the hidden reference's story and pacing.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
+- id: asset-84-purahome-filter-direct-response-ad
+  librarian_asset_name: asset-84
+  family: video-editing-reference-match
+  idea: Build a vertical direct-response ad from the supplied PuraHome montage and hidden golden.
+  source_asset: assets/asset-84/montage-output.mp4
+  golden_solution_asset: assets/asset-84/output-video.mp4
+  output_contract: /app/output/final_video.mp4
+  concept: Create a 46-56 second vertical direct-response spot for the supplied PuraHome faucet-mounted water filter.
+  task_requirements: *golden_requirements
+  verifier_focus: *golden_focus
