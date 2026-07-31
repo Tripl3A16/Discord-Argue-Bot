@@ -1,5 +1,7 @@
 # PipeV2 six-asset runbook
 
+Companion seed: `docs/pipev2-six-asset-seed.yaml`.
+
 This document describes how to prepare the six-asset PipeV2 rollout from
 [`mm-sapphire-pipelines` PR 49](https://github.com/Parsewave-internal/mm-sapphire-pipelines/pull/49).
 It does not start or authorize a pipeline run.

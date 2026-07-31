@@ -1,0 +1,77 @@
+# Companion seed for pipev2-six-asset-runbook.md.
+# Prepared only; this file does not launch a pipeline.
+# Source: the first 6 entries of mm-sapphire-pipelines PR 49 ideas1.yaml,
+# selected sequentially without replacement at head aa43d9e.
+ideas:
+  - id: my-life-as-a-student-daily-routine
+    librarian_asset_name: asset-265
+    family: video-editing-reference-match
+    idea: Build a bright 31-39 second child-friendly school-day routine explainer.
+    source_asset: assets/asset-265/montage-output.mp4
+    golden_solution_asset: assets/asset-265/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Progress chronologically through waking, breakfast, school, friends, homework, dinner, and bedtime.
+    task_requirements: &pipev2_requirements
+      - Expose only montage-output.mp4 to the solver and keep output-video.mp4 hidden.
+      - Use only supplied local media and write /app/output/final_video.mp4.
+      - Keep requirements source-grounded without revealing exact golden cuts, timing, layout, or judge criteria.
+      - Preserve an audible, playable, nonblank output in the requested duration and orientation.
+    verifier_focus: &pipev2_focus
+      - source-grounded subject, structure, pacing, typography, and audio treatment
+      - coherent progression and deliberate ending without generic padding or repeated footage
+      - fair semantic comparison that rewards valid alternatives rather than exact-pixel matching
+
+  - id: tradition-speed-horse-racing-promo
+    librarian_asset_name: asset-266
+    family: video-editing-reference-match
+    idea: Build a dramatic 35-43 second horse-racing tradition and speed promo.
+    source_asset: assets/asset-266/montage-output.mp4
+    golden_solution_asset: assets/asset-266/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Establish the track and racing tradition, then escalate through pack movement, fences, overtakes, and a breath-held finish.
+    task_requirements: *pipev2_requirements
+    verifier_focus: *pipev2_focus
+
+  - id: digital-drift-performance-car-reel
+    librarian_asset_name: asset-267
+    family: video-editing-reference-match
+    idea: Build a high-energy 26-34 second performance-car and drifting reel.
+    source_asset: assets/asset-267/montage-output.mp4
+    golden_solution_asset: assets/asset-267/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Introduce the sports car, accelerate through highway and drift action, and finish on a memorable hero image.
+    task_requirements: *pipev2_requirements
+    verifier_focus: *pipev2_focus
+
+  - id: books-memory-connection-editorial-short
+    librarian_asset_name: asset-268
+    family: video-editing-reference-match
+    idea: Build a reflective 24-31 second editorial about books, memory, and human connection.
+    source_asset: assets/asset-268/montage-output.mp4
+    golden_solution_asset: assets/asset-268/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Connect shared reading, library discovery, photographs, and encounters across generations to an intentional note of distance.
+    task_requirements: *pipev2_requirements
+    verifier_focus: *pipev2_focus
+
+  - id: welcome-to-the-game-skate-culture-opener
+    librarian_asset_name: asset-269
+    family: video-editing-reference-match
+    idea: Build a game-like 32-40 second urban skate-culture opener.
+    source_asset: assets/asset-269/montage-output.mp4
+    golden_solution_asset: assets/asset-269/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Move from a character portrait and street locations through readable wheel-sport action to a branded finish.
+    task_requirements: *pipev2_requirements
+    verifier_focus: *pipev2_focus
+
+  - id: live-chat-skate-session-highlight
+    librarian_asset_name: asset-270
+    family: video-editing-reference-match
+    idea: Build a 29-37 second livestream-style skate-session highlight.
+    source_asset: assets/asset-270/montage-output.mp4
+    golden_solution_asset: assets/asset-270/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Keep chat and skate footage legible while progressing through arrival, tricks, reactions, falls, movement, and a host-facing finish.
+    task_requirements: *pipev2_requirements
+    verifier_focus: *pipev2_focus
