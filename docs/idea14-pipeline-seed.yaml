@@ -1,0 +1,61 @@
+# Companion seed for IDEA14_PIPELINE_RUN_GUIDE.md.
+# Prepared only; this file does not launch a pipeline.
+# Source: pipelines/videoediting_pipeline/ideas14.yaml on 2026-07-31.
+# NOTE: the source currently contains 5 ideas, although the guide says 15.
+ideas:
+  - id: mechwest-episode-one-animated-source-trailer-edit
+    family: video-editing-reference-match
+    idea: Create a 100-115 second steampunk-Western animated trailer centered on Pearl West and the one-eyed mech Six.
+    source_asset: assets/idea-one-1/source.mp4
+    golden_solution_asset: assets/idea-one-1/golden.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Build from frontier discovery and character warmth into human-automaton conflict, pursuit, mystery, and action.
+    task_requirements: &idea14_requirements
+      - Expose only the source asset to the solver and keep the golden hidden.
+      - Use only supplied local media and preserve source audio intentionally.
+      - Write an audible landscape MP4 to /app/output/final_video.mp4.
+      - Keep the instruction fair without revealing exact golden cuts, timing, titles, or judge criteria.
+    verifier_focus: &idea14_focus
+      - playable, nonblank, audible output in the requested duration and source resolution class
+      - source-grounded character, story, pacing, title, transition, and audio treatment
+      - coherent trailer escalation and payoff without repeated padding or exact-pixel matching
+
+  - id: our-heroes-rock-ruby-bridges-animated-source-trailer-edit
+    family: video-editing-reference-match
+    idea: Create a 50-65 second inspiring historical animated trailer focused on Ruby Bridges and school desegregation.
+    source_asset: assets/idea-two-2/source-1.mp4
+    golden_solution_asset: assets/idea-two-2/golden-1.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Move from a young protagonist's discovery into hostility, courage, empathy, and a hopeful civil-rights payoff.
+    task_requirements: *idea14_requirements
+    verifier_focus: *idea14_focus
+
+  - id: rise-of-blus-nouns-animated-source-trailer-edit
+    family: video-editing-reference-match
+    idea: Create a 25-35 second colorful coming-of-age trailer for The Rise of Blus.
+    source_asset: assets/idea-three-3/source-2.mp4
+    golden_solution_asset: assets/idea-three-3/golden-2.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Establish Blus, Nouns imagery, family expectations, and the floating-city world before an adventurous lift.
+    task_requirements: *idea14_requirements
+    verifier_focus: *idea14_focus
+
+  - id: dont-feed-these-animals-animated-source-trailer-edit
+    family: video-editing-reference-match
+    idea: Create a 50-65 second darkly comic creature-feature trailer set in a secret laboratory.
+    source_asset: assets/idea-four-4/source-3.mp4
+    golden_solution_asset: assets/idea-four-4/golden-3.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Connect the white rabbit and forbidden-feeding setup to transformation, escape, chase escalation, and payoff.
+    task_requirements: *idea14_requirements
+    verifier_focus: *idea14_focus
+
+  - id: one-small-step-animated-source-trailer-edit
+    family: video-editing-reference-match
+    idea: Create a 50-65 second heartfelt animated trailer about Luna's astronaut dream.
+    source_asset: assets/idea-five-5/source-4.mp4
+    golden_solution_asset: assets/idea-five-5/golden-4.mp4
+    output_contract: /app/output/final_video.mp4
+    concept: Shape childhood ambition, father-daughter support, setbacks, grief, perseverance, and space-flight wonder into an uplifting arc.
+    task_requirements: *idea14_requirements
+    verifier_focus: *idea14_focus

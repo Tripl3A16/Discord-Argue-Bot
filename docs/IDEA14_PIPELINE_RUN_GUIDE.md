@@ -1,5 +1,9 @@
 # Running the Idea 14 video-editing pipeline
 
+Companion seed: `docs/idea14-pipeline-seed.yaml`. The current authoritative
+pipeline seed contains 5 ideas, while this older guide describes a 15-task
+run; reconcile that mismatch before launching.
+
 This run builds 15 video-editing tasks from the downloaded Librarian sample in
 `assets/`. Each entry in `ideas14.yaml` exposes a montage to the solver and
 keeps its paired `output-video.mp4` as the hidden golden reference.
