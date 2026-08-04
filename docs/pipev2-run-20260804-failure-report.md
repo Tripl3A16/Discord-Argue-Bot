@@ -16,17 +16,19 @@ The engine's `success=11 failed=0` result means all tasks completed the pipeline
 
 ## Non-accepted tasks
 
-| Index | Task | Asset | Outcome | Terminal stage | Evidence |
-| ---: | --- | --- | --- | --- | --- |
-| 0 | `000-cc0b44` | `asset-277` | `needs_review_discrimination` | `pipev2.run_rg4` | `INSUFFICIENT_DISCRIMINATION`: the oracle-safe training pool could not satisfy RG4's discrimination contract after all regeneration rounds. Holdout evaluation was correctly skipped. |
-| 2 | `002-30d137` | `asset-284` | `needs_review_quality` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
-| 3 | `003-653fbd` | `asset-285` | `needs_review_quality` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
-| 4 | `004-f1148a` | `asset-297` | `needs_review_quality` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
-| 6 | `006-9da516` | `asset-171` | `needs_review_discrimination` | `pipev2.run_rg4` | `HOLDOUT_GENERALIZATION_FAILURE`: the frozen rubric failed the holdout generalization/discrimination contract. |
-| 7 | `007-0b3462` | `asset-201` | `needs_review_quality` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
-| 8 | `008-2e5adb` | `asset-21` | `needs_review_quality` | `difficulty.pipev2_solver_split` | One of the three solver trials produced an invalid saved MP4 artifact, so the required two-training/one-holdout split could not proceed safely. |
-| 9 | `009-827710` | `asset-23` | `needs_review_quality` | `oracle.pipev2_score_golden.bootstrap` | Bootstrap oracle score was `0.666667`, below the required `0.750000` early-quality floor. |
-| 10 | `010-477f07` | `asset-267` | `needs_review_quality` | `oracle.pipev2_score_golden.bootstrap` | Bootstrap oracle score was `0.703704`, below the required `0.750000` early-quality floor. |
+| Index | Task | Asset | Outcome | Oracle | Agent 1 | Agent 2 | Agent 3 | Terminal stage | Evidence |
+| ---: | --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- |
+| 0 | `000-cc0b44` | `asset-277` | `needs_review_discrimination` | `1.0000` | `0.9143` | `0.2286` | N/E | `pipev2.run_rg4` | `INSUFFICIENT_DISCRIMINATION`: the oracle-safe training pool could not satisfy RG4's discrimination contract after all regeneration rounds. Holdout evaluation was correctly skipped. |
+| 2 | `002-30d137` | `asset-284` | `needs_review_quality` | `0.8182` | `0.3636` | `0.4545` | `0.6682` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
+| 3 | `003-653fbd` | `asset-285` | `needs_review_quality` | `0.6532` | `0.4194` | `0.4194` | `0.4565` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
+| 4 | `004-f1148a` | `asset-297` | `needs_review_quality` | `0.8286` | `0.4857` | `0.4857` | `0.0000` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
+| 6 | `006-9da516` | `asset-171` | `needs_review_discrimination` | `1.0000` | `0.3514` | `0.1892` | `0.7568` | `pipev2.run_rg4` | `HOLDOUT_GENERALIZATION_FAILURE`: the frozen rubric failed the holdout generalization/discrimination contract. |
+| 7 | `007-0b3462` | `asset-201` | `needs_review_quality` | `0.7273` | `0.3636` | `0.3636` | `0.0000` | `pipev2.run_rg4` | `ORACLE_PROTECTION_FAILURE`: RG4 could not freeze a discriminative rubric without violating oracle protection. |
+| 8 | `008-2e5adb` | `asset-21` | `needs_review_quality` | `1.0000` | `1.0000` | N/E | `1.0000` | `difficulty.pipev2_solver_split` | Agent 2 failed before producing a saved MP4, so the required two-training/one-holdout split could not proceed safely. |
+| 9 | `009-827710` | `asset-23` | `needs_review_quality` | `0.6667` | N/E | N/E | N/E | `oracle.pipev2_score_golden.bootstrap` | Bootstrap oracle score was `0.666667`, below the required `0.750000` early-quality floor. |
+| 10 | `010-477f07` | `asset-267` | `needs_review_quality` | `0.7037` | N/E | N/E | N/E | `oracle.pipev2_score_golden.bootstrap` | Bootstrap oracle score was `0.703704`, below the required `0.750000` early-quality floor. |
+
+`N/E` means the role was not evaluated. Scores for RG4-stage outcomes are the rubric-stage oracle/training/holdout scores recorded by RG4: Agent 1 and Agent 2 are the two training solvers, and Agent 3 is the deferred holdout solver. Task `000-cc0b44` never evaluated its holdout, so Agent 3 has no score. Scores for tasks `008–010` come from the bootstrap verifier stage because those tasks stopped before RG4. These are not final deployed-rubric rescores.
 
 ## Failure-class breakdown
 
@@ -48,7 +50,7 @@ For each task, candidate generation and validation ran, but RG4 could not freeze
 
 ### Invalid solver artifact (1)
 
-- `asset-21` had one solver trial with an invalid saved MP4.
+- `asset-21` had one solver trial with an invalid saved MP4. Agent 2 failed during setup when `nvm install 22` could not resolve a Node 22 release, so no agent output or verifier score exists for that lane.
 
 Before rerunning, inspect the failed solver trial's artifact manifest, agent log, FFmpeg/ffprobe output, and final output path. A rerun is reasonable only after determining whether the artifact failure was transient or caused by the task contract/edit strategy.
 
