@@ -1,0 +1,101 @@
+# Five saved PipeV2 asset-recovery task ideas.
+# Prepared for production trials only: no deployment and no PR are implied.
+# The solver sees montage-output.mp4; output-video.mp4 and the typed golden
+# package remain hidden. The final output is a human-viewable reconstruction.
+_prepared_count: 5
+_solver_criterion: aggregate_mean_score <= 0.65
+_trial_plan: 3 solver trials per task; inspect the aggregate mean, not any one task
+ideas:
+  - id: temple-tricolor-flight-opener
+    librarian_asset_name: asset-507
+    source_asset: assets/asset-507/montage-output.mp4
+    golden_solution_asset: assets/asset-507/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    task: >-
+      Produce an 8.0-10.2 second portrait opener from the supplied temple,
+      ritual flame, devotional illustration, blue/green energy, tricolor flag,
+      and aircraft imagery. Build an atmospheric opening, visual lift, and
+      resolved source-grounded end frame with audible sound.
+    requirements:
+      - Keep output portrait and at least 1080x1920.
+      - Use only visible source media and source-supported wording.
+      - Use clean crops, readable typography, motivated transitions, and no filler.
+    judge_focus:
+      - recognizable visual identity and coherent short arc
+      - playable audio, clean continuity, and deliberate final hold
+      - no fabricated claims, unrelated media, black padding, or truncation
+
+  - id: beauty-creator-ugc-demo
+    librarian_asset_name: asset-512
+    source_asset: assets/asset-512/montage-output.mp4
+    golden_solution_asset: assets/asset-512/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    task: >-
+      Produce a 26.0-35.0 second portrait UGC beauty edit from the supplied
+      creators, cosmetic tube close-ups, clean-girl lifestyle moments, and
+      product demonstration footage. Structure it as hook, demonstration, and
+      source-led takeaway while preserving intelligible speech.
+    requirements:
+      - Keep faces, product details, captions, and speech readable and complete.
+      - Do not invent efficacy, safety, price, or testimonial claims.
+      - Keep the edit audible, purposeful, and free of repetitive padding.
+    judge_focus:
+      - hook-to-demo structure and visible product/application detail
+      - caption/audio alignment, clean portrait framing, and complete close
+      - no unsupported claims, hidden product, or abrupt speaker cuts
+
+  - id: creator-social-promo-reel
+    librarian_asset_name: asset-517
+    source_asset: assets/asset-517/montage-output.mp4
+    golden_solution_asset: assets/asset-517/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    task: >-
+      Build a fast portrait creator/social-promo reel from the supplied
+      presenter, comedy, commerce, gaming, plant, office, and CTA-card clips.
+      Establish a recognizable creator hook, vary the visual rhythm, and finish
+      on a clear source-supported CTA.
+    requirements:
+      - Preserve meaningful speech and do not cut presenters mid-utterance.
+      - Use only supplied media and readable, source-faithful captions.
+      - Avoid repeated filler, black tails, and unsupported promotional claims.
+    judge_focus:
+      - clear hook-to-CTA progression and intentional pacing
+      - speech continuity, readable text, balanced sound, and playable output
+      - no static-image-as-video substitutions or abrupt truncation
+
+  - id: network-led-business-explainer
+    librarian_asset_name: asset-527
+    source_asset: assets/asset-527/montage-output.mp4
+    golden_solution_asset: assets/asset-527/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    task: >-
+      Produce a concise landscape business explainer from the supplied network,
+      presenter, charts, office, and supporting footage. Make the explanation
+      understandable through a deliberate setup, evidence, and conclusion.
+    requirements:
+      - Keep landscape composition, charts, captions, and presenter speech legible.
+      - Preserve complete statements and use only claims grounded in the source.
+      - Keep the soundtrack clean; do not fold unrelated sound effects into it.
+    judge_focus:
+      - coherent business narrative and readable evidence
+      - intact speaker phrases, clean audio, and a resolved conclusion
+      - no black filler, invented facts, or image/video modality errors
+
+  - id: sai-silks-market-cap-explainer
+    librarian_asset_name: asset-532
+    source_asset: assets/asset-532/montage-output.mp4
+    golden_solution_asset: assets/asset-532/output-video.mp4
+    output_contract: /app/output/final_video.mp4
+    task: >-
+      Assemble a landscape explainer from the supplied Sai Silks, market-cap,
+      retail, presenter, and supporting still imagery. Present a clear setup,
+      evidence-led middle, and source-grounded takeaway with a human-viewable
+      final video.
+    requirements:
+      - Keep stills as intentional stills and preserve video as video.
+      - Keep narration/music separate from incidental sound effects where possible.
+      - Use source-faithful captions and do not invent financial advice or facts.
+    judge_focus:
+      - understandable narrative, readable financial visuals, and complete audio
+      - no still-to-movie conversion, effect contamination, or speaker truncation
+      - no unsupported claims, black padding, or abrupt ending
