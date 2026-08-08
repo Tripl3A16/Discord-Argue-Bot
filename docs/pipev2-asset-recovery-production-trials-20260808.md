@@ -38,9 +38,11 @@ against an expected `0.85`; it was non-terminal and correctly allowed the
 trial to continue.
 
 The successful solver output was a human-viewable 9.53-second, 1080x1920
-H.264 portrait MP4 with full decode verification. It had no audio track,
-which is permitted by this particular opener task but is not sufficient to
-validate the new extraction/audio contract.
+H.264 portrait MP4 with full decode verification. It had no audio track. The
+production-generated instruction allowed that, even though the preparation
+brief requested audible sound; this is a task-generation mismatch and should
+be fixed before using the opener as an audio-sensitive benchmark. It is not
+evidence that the new extraction/audio contract works.
 
 ## Infrastructure findings and fixes
 
