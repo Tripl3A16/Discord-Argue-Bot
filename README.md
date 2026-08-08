@@ -134,3 +134,4 @@ Web dashboard
 ## Operations documentation
 
 - [Librarian video pipeline runbook](docs/VIDEO_PIPELINE_RUNBOOK.md)
+- [Asset recovery and editorial reconstruction win report](docs/ASSET_EXTRACTION_PIPELINE_WIN_REPORT_2026-08-08.md)
